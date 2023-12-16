@@ -7,7 +7,7 @@
     tools:context=".ui.mycloset.MyclosetFragment">
 
 
-
+    <!-- Outerwear Progress -->
     <!-- Outerwear Progress -->
     <TextView
         android:id="@+id/textViewOuterwear"
