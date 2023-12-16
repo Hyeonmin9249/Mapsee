@@ -28,10 +28,6 @@ class DailylookFragment : Fragment() {
         _binding = FragmentDailylookBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDailylook
-        dailylookViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
