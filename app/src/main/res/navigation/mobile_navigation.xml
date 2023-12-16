@@ -7,21 +7,21 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.mapsee.ui.home.CommunityFragment"
+        android:name="com.example.mapsee.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.mapsee.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_mycloset"
+        android:name="com.example.mapsee.ui.mycloset.MyclosetFragment"
+        android:label="@string/title_mycloset"
+        tools:layout="@layout/fragment_mycloset" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.mapsee.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_dailylook"
+        android:name="com.example.mapsee.ui.dailylook.DailylookFragment"
+        android:label="@string/title_dailylook"
+        tools:layout="@layout/fragment_dailylook" />
 
     <fragment
         android:id="@+id/navigation_cart"
@@ -31,8 +31,8 @@
 
     <fragment
         android:id="@+id/navigation_community"
-        android:name="com.example.mapsee.ui.cart.CartFragment"
-        android:label="@string/title_cart"
+        android:name="com.example.mapsee.ui.community.CommunityFragment"
+        android:label="@string/title_community"
         tools:layout="@layout/fragment_community" />
 
 

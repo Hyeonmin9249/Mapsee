@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Mapsee</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_mycloset">MY Closet</string>
+    <string name="title_dailylook">Dailylook</string>
     <string name="title_cart">Cart</string>
     <string name="title_community">Community</string>
 </resources>
