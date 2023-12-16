@@ -1,11 +1,13 @@
 package com.example.mapsee.ui.mycloset
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
+import com.example.mapsee.AddClothesActivity
 import com.example.mapsee.databinding.FragmentMyclosetBinding
 
 class MyclosetFragment : Fragment() {
@@ -37,6 +39,11 @@ class MyclosetFragment : Fragment() {
         updateProgressBar(binding.progressBarTops, calculatePercentage(topsCount, totalItems))
         updateProgressBar(binding.progressBarBottoms, calculatePercentage(bottomsCount, totalItems))
         updateProgressBar(binding.progressBarAccessories, calculatePercentage(accessoriesCount, totalItems))
+
+        // Set OnClickListener for the Add Clothes button
+        binding.btnAddClothes.setOnClickListener {
+            startActivity(Intent(activity, AddClothesActivity::class.java))
+        }
     }
 
     private fun calculatePercentage(itemCount: Int, totalItems: Int): Int {

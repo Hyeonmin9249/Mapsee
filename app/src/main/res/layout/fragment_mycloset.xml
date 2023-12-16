@@ -7,14 +7,26 @@
     tools:context=".ui.mycloset.MyclosetFragment">
 
 
+    <!-- Title for Percentages -->
+    <TextView
+        android:id="@+id/textViewPercentageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Percentages by Type"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
     <!-- Outerwear Progress -->
-    <!-- Outerwear Progress -->
+    <!-- Adjust the top constraint of this TextView to be below textViewPercentageTitle -->
     <TextView
         android:id="@+id/textViewOuterwear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Outerwear"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPercentageTitle"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp" />
@@ -99,5 +111,18 @@
         app:layout_constraintTop_toBottomOf="@id/textViewAccessories"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button to Add Clothes -->
+    <Button
+        android:id="@+id/btnAddClothes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Clothes"
+        app:layout_constraintTop_toBottomOf="@id/progressBarAccessories"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

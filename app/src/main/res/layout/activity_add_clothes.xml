@@ -1,0 +1,99 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextClothesName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Clothes Name" />
+
+    <EditText
+        android:id="@+id/editTextBrandName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Brand Name" />
+
+    <!-- Title for the Categories -->
+    <TextView
+        android:id="@+id/textViewCategoriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="16dp"/>
+
+
+    <!-- Checkboxes for Categories -->
+    <CheckBox
+        android:id="@+id/checkBoxOuterwear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outerwear" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tops" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBottoms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottoms" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAccessories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accessories" />
+    <!-- Add additional checkboxes here with layout_width and layout_height -->
+
+
+    <!-- Title for the Thickness -->
+    <TextView
+        android:id="@+id/textViewThicknessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thickness"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Checkboxes for Thickness -->
+    <CheckBox
+        android:id="@+id/checkBoxHigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Low" />
+
+
+
+
+
+    <Button
+        android:id="@+id/btnSaveClothes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save" />
+
+
+
+
+
+</LinearLayout>
