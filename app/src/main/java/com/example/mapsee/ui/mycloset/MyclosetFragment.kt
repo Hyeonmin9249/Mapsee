@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import com.example.mapsee.AddClothesActivity
+import com.example.mapsee.ClothesListActivity
 import com.example.mapsee.databinding.FragmentMyclosetBinding
 
 class MyclosetFragment : Fragment() {
@@ -16,9 +17,7 @@ class MyclosetFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMyclosetBinding.inflate(inflater, container, false)
         return binding.root
@@ -43,6 +42,11 @@ class MyclosetFragment : Fragment() {
         // Set OnClickListener for the Add Clothes button
         binding.btnAddClothes.setOnClickListener {
             startActivity(Intent(activity, AddClothesActivity::class.java))
+        }
+
+        // Set OnClickListener for the "My List" button
+        binding.btnMyList.setOnClickListener {
+            startActivity(Intent(activity, ClothesListActivity::class.java))
         }
     }
 

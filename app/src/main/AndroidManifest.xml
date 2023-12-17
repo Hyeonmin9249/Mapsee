@@ -38,6 +38,8 @@
 
         <!-- AddClothesActivity Declaration -->
         <activity android:name=".AddClothesActivity" />
+        <activity android:name=".ClothesListActivity" />
+
 
     </application>
 
