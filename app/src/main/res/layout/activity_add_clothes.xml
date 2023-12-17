@@ -57,61 +57,74 @@
         android:layout_marginTop="16dp"/>
 
 
-    <!-- Checkboxes for Categories -->
-    <CheckBox
-        android:id="@+id/checkBoxOuterwear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Outerwear" />
+        <RadioGroup
+            android:id="@+id/radioGroupCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <CheckBox
-        android:id="@+id/checkBoxTops"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tops" />
+            <RadioButton
+                android:id="@+id/radioButtonOuterwear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outerwear" />
 
-    <CheckBox
-        android:id="@+id/checkBoxBottoms"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bottoms" />
+            <RadioButton
+                android:id="@+id/radioButtonTops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tops" />
 
-    <CheckBox
-        android:id="@+id/checkBoxAccessories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accessories" />
+            <RadioButton
+                android:id="@+id/radioButtonBottoms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bottoms" />
+
+            <RadioButton
+                android:id="@+id/radioButtonAccessories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accessories" />
+        </RadioGroup>
+
+
     <!-- Add additional checkboxes here with layout_width and layout_height -->
 
 
-    <!-- Title for the Thickness -->
-    <TextView
-        android:id="@+id/textViewThicknessTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thickness"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/textViewThicknessTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thickness"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_marginTop="16dp"/>
 
-    <!-- Checkboxes for Thickness -->
-    <CheckBox
-        android:id="@+id/checkBoxHigh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="High" />
+        <!-- Thickness RadioGroup -->
+        <RadioGroup
+            android:id="@+id/radioGroupThickness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/checkBoxMedium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medium" />
+            <RadioButton
+                android:id="@+id/radioButtonHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High" />
 
-    <CheckBox
-        android:id="@+id/checkBoxLow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Low" />
+            <RadioButton
+                android:id="@+id/radioButtonMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium" />
 
+            <RadioButton
+                android:id="@+id/radioButtonLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low" />
+        </RadioGroup>
 
 
 
@@ -121,7 +134,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save" />
-
 
 
 

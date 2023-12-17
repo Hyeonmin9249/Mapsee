@@ -6,18 +6,18 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mapsee.databinding.ActivityAddClothesBinding
 
 class AddClothesActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityAddClothesBinding
     private var imageBitmap: Bitmap? = null
 
     companion object {
-        val clothesList = mutableListOf<ClothingItem>() // List to store ClothingItem objects
+        val clothesList = mutableListOf<ClothingItem>()
     }
 
     private val requestCameraPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
@@ -50,12 +50,20 @@ class AddClothesActivity : AppCompatActivity() {
 
         binding.btnSaveClothes.setOnClickListener {
             val clothesName = binding.editTextClothesName.text.toString()
+            val brandName = binding.editTextBrandName.text.toString()
+
+            // Retrieve selected category
+            val selectedCategory = findViewById<RadioButton>(binding.radioGroupCategory.checkedRadioButtonId)?.text.toString()
+
+            // Retrieve selected thickness
+            val selectedThickness = findViewById<RadioButton>(binding.radioGroupThickness.checkedRadioButtonId)?.text.toString()
+
             if (clothesName.isNotBlank() && imageBitmap != null) {
-                clothesList.add(ClothingItem(imageBitmap!!, clothesName)) // Add ClothingItem to the list
+                clothesList.add(ClothingItem(imageBitmap!!, clothesName, brandName, selectedCategory, selectedThickness))
                 Toast.makeText(this, "Clothes saved!", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Please enter a name and take a photo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter all details and take a photo", Toast.LENGTH_SHORT).show()
             }
         }
     }
