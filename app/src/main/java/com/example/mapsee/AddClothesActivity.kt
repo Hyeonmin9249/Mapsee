@@ -4,12 +4,10 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mapsee.databinding.ActivityAddClothesBinding
 
@@ -19,7 +17,7 @@ class AddClothesActivity : AppCompatActivity() {
     private var imageBitmap: Bitmap? = null
 
     companion object {
-        val clothesList = mutableListOf<String>() // Static list to store clothes names
+        val clothesList = mutableListOf<ClothingItem>() // List to store ClothingItem objects
     }
 
     private val requestCameraPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
@@ -37,7 +35,6 @@ class AddClothesActivity : AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddClothesBinding.inflate(layoutInflater)
@@ -53,12 +50,12 @@ class AddClothesActivity : AppCompatActivity() {
 
         binding.btnSaveClothes.setOnClickListener {
             val clothesName = binding.editTextClothesName.text.toString()
-            if (clothesName.isNotBlank()) {
-                clothesList.add(clothesName) // Add the clothes name to the list
+            if (clothesName.isNotBlank() && imageBitmap != null) {
+                clothesList.add(ClothingItem(imageBitmap!!, clothesName)) // Add ClothingItem to the list
                 Toast.makeText(this, "Clothes saved!", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                Toast.makeText(this, "Please enter a clothes name", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter a name and take a photo", Toast.LENGTH_SHORT).show()
             }
         }
     }

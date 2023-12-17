@@ -1,5 +1,6 @@
 package com.example.mapsee
 
+import ClothingItemAdapter
 import android.R
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -17,7 +18,9 @@ class ClothesListActivity : AppCompatActivity() {
         binding.titleTextView.text = "My Clothes List"
 
         // Set up the ListView with the clothes list
-        val adapter = ArrayAdapter(this, R.layout.simple_list_item_1, AddClothesActivity.clothesList)
+
+        // Set up the ListView with the custom adapter
+        val adapter = ClothingItemAdapter(this, AddClothesActivity.clothesList)
         binding.listViewClothes.adapter = adapter
     }
 }
